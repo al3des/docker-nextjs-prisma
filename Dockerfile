@@ -50,5 +50,5 @@ EXPOSE 3000/tcp
 
 # Run database deployment and start the server
 #CMD ["sh", "-c", "bun run db:deploy && bun run server.js"]
-RUN npm run db:deploy
+RUN bun run db:deploy
 ENTRYPOINT ["bun", "run", "server.js"]
